@@ -2,13 +2,17 @@ import React, { useState } from 'react'
 import './Login.css'
 import {Typography,Button} from '@mui/material'
 import {Link} from 'react-router-dom'
+import {useDispatch} from 'react-redux'
+import { loginUser } from '../../Actions/User'
 
 const Login = (e) => {
     const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
   const loginHandler = (e) => {
     e.preventDefault();
-    console.log(email, password);
+    // console.log(email, password);
+    dispatch(loginUser(email, password));
   };
   return (
     <div className='login'>

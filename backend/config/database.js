@@ -1,7 +1,8 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-exports.connectDatabase =()=>{
-    mongoose.connect(process.env.MONGO_URI)
-    .then(con=>console.log(`data base connected: ${con.connection.host}`))
-    .catch((err)=>console.log(err));
-}
+exports.connectDatabase = () => {
+  mongoose
+    .connect(process.env.MONGO_URI)
+    .then((con) => console.log(`Database Connected: ${con.connection.host}`))
+    .catch((err) => console.log(err));
+};
