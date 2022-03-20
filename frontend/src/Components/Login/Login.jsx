@@ -35,9 +35,11 @@ const Login = () => {
   return (
     <div className="login">
       <form className="loginForm" onSubmit={loginHandler}>
+
         <Typography variant="h3" style={{ padding: "2vmax" }}>
           Social Aap
         </Typography>
+     
 
         <input
           type="email"
@@ -64,6 +66,10 @@ const Login = () => {
         <Link to="/register">
           <Typography>New User?</Typography>
         </Link>
+
+        <Typography  style={{ padding: "2vmax" }}>
+          Made With ❤️ By PuneetDabral
+        </Typography>
       </form>
     </div>
   );
